@@ -100,6 +100,9 @@ class BodyController:
                 dot.edge(str(nodo.value.bodyId), str(nodo.right.value.bodyId))
                 self._generar_arbol_grafico(nodo.right, dot)
 
+    def clear_db(self):
+        self.root = None
+
 
 
 

@@ -85,5 +85,10 @@ class Asteroid:
         ]
         }])
 
+    @app.route('/clear_db', methods=['GET'])
+    def clear_db():
+        bc.clear_db()
+        return jsonify({'message': 'Se ha vaciado la base de datos correctamente'})
+
     if __name__ == '__main__':
         app.run(debug=True, host='0.0.0.0', port=3000)
